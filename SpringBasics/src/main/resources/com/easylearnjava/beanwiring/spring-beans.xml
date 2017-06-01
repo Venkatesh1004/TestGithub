@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+<bean  id = "studentobj" class ="com.easylearnjava.beanwiring.Student"  autowire= "byName">
+  <property name="stdName" value = "venkatesh"></property>
+
+</bean>
+<bean   id = "myBook" class = "com.easylearnjava.beanwiring.Book"> 
+<property name="bkName" value= "JAVA"></property>
+     </bean>
+
+   <bean   id = "mybookobj" class = "com.easylearnjava.beanwiring.Book"> 
+<property name="bkName" value= "JAVA"></property>
+     </bean>
+     
+     
+     
+     
+          <bean id = "carObj" class ="com.easylearnjava.beanwiring.Car"  autowire = "byType" ></bean>
+          <bean id = "myobj" class ="com.easylearnjava.beanwiring.Wheel"  >
+          <property name="wheelName" value = "CEAT"></property>
+          
+          </bean>
+          
+          <bean id = "clgobj" class= "com.easylearnjava.beanwiring.College" autowire = "constructor"></bean>
+          </beans>
+       <!--    
+          </bean>
+     <bean id = "mywheelobj" class ="com.easylearnjava.beanwiring.Wheel"  >   
+          <property name="wheelName" value = "CAT"></property>
+           </bean>   -->
+              
+
+
